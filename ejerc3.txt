@@ -1,0 +1,28 @@
+package ejercbucles3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int n,mayor = 0,total = 0,fallos = 0;
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println("Introduce un número");
+			n = sc.nextInt();
+			total++;
+			if(n>mayor) {
+				mayor = n;
+			}else {
+				fallos++;
+			}
+		}while(n != 0);
+		
+		total-=1;
+		fallos-=1;
+		
+		System.out.println("El total de num introducidos es "+ total);
+		System.out.println("El total de num fallados es "+ fallos);
+	}
+
+}
